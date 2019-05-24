@@ -60,6 +60,7 @@ class FigureClass():
             y = plotdf[self.y]
             self.__axes.plot(x, y, 's--', label=label)
         self.__axes.legend()
+        self.__fig.savefig(self.fname)
         return self.__fig
 
     def plotline(self):
