@@ -250,6 +250,19 @@ class FoMFigureClass(FigureClass):
         self.fname = 'fom.tiff'
 
 
+class CVFigureClass(FigureClass):
+    def __init__(self, df):
+        FigureClass.__init__(self, df)
+        self.yscale = 'linear'
+        self.ylabel = '$Capacitance\ (pF)$'
+        self.xscale = 'linear'
+        self.xlabel = '$Gate\ Volgate\ (V)$'
+        self.title = '$CV\ Curve$'
+        self.y = 'Capacitance(pF)'
+        self.x = 'Voltage(V)'
+        self.fname = 'CV.tiff'
+
+
 if __name__ == '__main__':
     df = pd.read_csv('alldf.csv')
 
